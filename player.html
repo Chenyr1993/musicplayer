@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My Player</title>
+    <link href="player.css" rel="stylesheet" />
+</head>
+<body>
+    <audio
+    controls
+    src="" id="audio" hidden>
+</audio>
+
+
+    <div id="controlBar">
+        <select id="music" onchange="changeMusic(0)">
+           
+        </select>
+        
+        <div id="btnArea">
+            <span onclick="playAudio()">4</span>
+            <span onclick="stopAudio()"><</span>
+            <span onclick="changeMusic(-1)">9</span>
+            <span onclick="changeTime(-10)">7</span>
+            <span onclick="changeTime(10)">8</span>
+            <span onclick="changeMusic(1)">:</span>
+            <span onclick="setMuted()">V</span>
+            <span onclick="setLoop()">q</span>
+            <span onclick="setRandom()">s</span>
+            <span onclick="setAllLoop()">`</span>
+            <span onclick="showBook()">@</span>
+        </div>
+        
+        <input id="progress" type="range" value="0" oninput="setProgressBar()" />
+        <input id="setVolValue" type="range" oninput="setVolume()" value="40" />
+        <button class="btnVol" onclick="btnSetVolume(-1)">-</button>
+        <button class="btnVol" onclick="btnSetVolume(1)">+</button>
+        <input id="volValue" type="text" readonly />
+        
+        <div id="info">
+            <span id="staus">請按下播放鈕</span>
+            <div>00:00 / 00:00</div>
+            <div>正常</div>
+        </div>
+        <!-- 歌本存放區 -->
+        <div id="book" class="hide">
+            <div class="dragDropbox" id="songPrepare">
+                <div title="music/Jin_The Astronaut.mp3"draggable="true" id="song1">Jin_The Astronaut</div>
+                <div title="music/JungKook _My You.mp3"draggable="true" id="song2">JungKook_My You</div>
+                <div title="music/Jimin_Christmas Love.mp3"draggable="true" id="song3">Jimin_Christmas Love</div>
+                <div title="music/IU_eight_Prod.Feat. SUGA of BTS.mp3"draggable="true" id="song4">IU_eight (Prod.Feat. SUGA of BTS)</div>
+                <div title="music/Jhope_Blue Side.mp3"draggable="true" id="song5">Jhope_Blue Side</div>
+            
+            </div>
+            <!-- 歌曲存入區 -->
+            <div class="dragDropbox" id="songList"></div>
+            <button onclick="updateSong()">更新歌單</button>
+        </div>
+    </div>
+
+    <script src="player.js"></script>
+   
+</body>
+</html>

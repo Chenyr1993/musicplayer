@@ -1,0 +1,185 @@
+#controlBar {
+
+    border: 5px groove rgb(184, 143, 193);
+    margin: auto;
+    border-radius: 10px;
+
+}
+
+#btnArea {
+    padding: 10px;
+    text-align: center;
+
+}
+
+#btnArea span {
+    color: #c07af2;
+    font-family: Webdings;
+    cursor: pointer;
+    font-size: 50px;
+    border: 3px solid rgb(183, 79, 244);
+    padding: 5px;
+}
+
+.btnVol {
+    size: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px #c07af2;
+    box-shadow: 0px 0px 1px rgb(163, 160, 160);
+
+}
+
+.btnVol:active {
+    transform: translateY(2px);
+}
+
+
+#setVolValue {
+    width: 100px;
+    height: 2px;
+    appearance: none;
+}
+
+#setVolValue::-webkit-slider-thumb {
+    appearance: none;
+    cursor: col-resize;
+    background-color: #c07af2;
+    border-radius: 5px;
+    width: 10px;
+    height: 10px;
+}
+
+#setVolValue::-moz-range-thumb {
+    appearance: none;
+    background-color: #c07af2;
+    border-radius: 5px;
+    cursor: col-resize;
+    width: 10px;
+    height: 10px;
+}
+
+#volValue {
+    width: 20px;
+    border-radius: 20%;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.5;
+    background-color: #c07af2;
+    color: rgb(235, 235, 227);
+
+}
+
+#info>div {
+    text-align: center;
+}
+
+#progress {
+    width: 99.5%;
+    height: 5px;
+    appearance: none;
+    margin-bottom: 10px;
+    background-color: #ffffffd0;
+}
+
+#progress::-webkit-slider-thumb {
+    appearance: none;
+    background-color: #c07af2;
+    cursor: pointer;
+    width: 10px;
+    height: 5px;
+    transition: .5s;
+}
+
+#progress::-webkit-slider-thumb:hover {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+#progress::-moz-range-thumb {
+    background-color: #c07af2;
+    cursor: pointer;
+    width: 10px;
+    height: 5px;
+    transition: .5s;
+}
+
+#progress::-moz-range-thumb:hover {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+#music,
+#info {
+    width: 100%;
+    font-size: 2rem;
+    background-color: #c07af2;
+    color: rgb(242, 239, 243);
+    overflow: hidden;
+}
+
+#info {
+    margin-top: 10px;
+}
+
+
+#staus {
+    position: relative;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes example {
+    0% {
+        left: -200px;
+        top: 0px;
+    }
+
+    100% {
+        left: 100%;
+        top: 0px;
+    }
+}
+
+
+#book>div {
+
+    float: left;
+    width: 47.5%;
+    height: 200px;
+    background-color: #c07af2;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #fff;
+    border: 5px double #fff;
+    padding: 15px;
+
+}
+
+
+
+.hide button {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+
+    color: #fff;
+    background-color: #a537f4;
+    border: none;
+    box-shadow: 0 9px rgba(125, 122, 122, 0.949);
+
+}
+
+.hide button:active {
+    background-color: #a537f4;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
